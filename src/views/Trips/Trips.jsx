@@ -1,10 +1,7 @@
-import React from 'react'
-import './Trips.scss';
+import "./Trips.scss";
 
 const Trips = () => {
-  return (
-    <div>Trips</div>
-  )
-}
+  return <div>Trips</div>;
+};
 
-export default Trips
+export default Trips;
