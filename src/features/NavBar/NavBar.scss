@@ -1,0 +1,48 @@
+@import '../../settings.scss';
+
+.navigation {
+    display: flex;
+    height: 100%;
+    border: 4px solid yellow;
+    .logo_container {
+        flex: 0 0 10%;
+        border: 3px solid purple;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo {          
+            display: inline-block;
+            color: $color-white;
+            font-size: 36px;
+            text-align: center;
+            font-family: $font-logo;
+        }
+    }
+    .nav_container {
+        flex: 0 0 70%;
+        border: 3px solid purple;
+        height: 100%;
+        color: $color-white;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-size: 24px;
+        .nav_items {
+            margin: 0 30px;
+            font-family: $font-main;
+        }
+
+    }
+    .nav_links {
+        text-decoration: none;
+        color: $color-white;
+     }
+    .login_container {
+        flex: 0 0 20%;
+        border: 3px solid purple;
+        height: 100%;
+    }
+}

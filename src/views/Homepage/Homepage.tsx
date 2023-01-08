@@ -1,9 +1,12 @@
 import React from 'react'
+import Header from '../../features/Header/Header';
 import './Homepage.scss';
 
 const Homepage = () => {
   return (
-    <div>Homepage</div>
+    <div>
+      <Header></Header>
+    </div>
   )
 }
 
