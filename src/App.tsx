@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Cart from './views/Cart/Cart';
+import Contact from './views/Contact/Contact';
 import Favourites from './views/Favourites/Favourites';
 import Homepage from './views/Homepage/Homepage';
 import NotFound from './views/NotFound/NotFound';
@@ -17,7 +18,7 @@ function App() {
           <Route path='order' element={<Order/>}/>
           <Route path='trips' element={<Trips/>}/>
           <Route path='favourites' element={<Favourites/>}/>
-          <Route path='contact' element={<Homepage/>}/>
+          <Route path='contact' element={<Contact/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </div>
