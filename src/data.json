@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Grand Canyon",
+        "description": "Visit one of the most iconic natural landmarks in the United States and explore the breathtaking views from the rim of the canyon.",
+        "destination": "canyon",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 2,
+        "name": "Amazon Rainforest",
+        "description": "Journey to the heart of the rainforest and discover the rich biodiversity of the Amazon.",
+        "destination": "rainforest",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 3,
+        "name": "Bali",
+        "description": "Relax on the beautiful beaches, visit the iconic rice terraces, and explore the vibrant culture of this Indonesian paradise.",
+        "destination": "bali",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 4,
+        "name": "New York City",
+        "description": "Experience the energy and excitement of the Big Apple, from the bright lights of Times Square to the iconic skyline.",
+        "destination": "nyc",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 5,
+        "name": "Iceland",
+        "description": "Explore the rugged beauty of this island nation, from the stunning fjords to the hot springs and geysers.",
+        "destination": "iceland",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 6,
+        "name": "Swiss Alps",
+        "description": "Experience the majestic beauty of the Alps, from the snow-capped peaks to the crystal-clear lakes.",
+        "destination": "alps",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 7,
+        "name": "Tokyo",
+        "description": "Immerse yourself in the vibrant culture of Japan's capital city, from the bustling streets to the tranquil temples.",
+        "destination": "tokyo",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 8,
+        "name": "Maldives",
+        "description": "Relax on the stunning white-sand beaches and enjoy the crystal-clear waters of the Indian Ocean.",
+        "destination": "maldives",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 9,
+        "name": "Morocco",
+        "description": "Explore the colorful markets and vibrant culture of this North African nation, from the bustling cities to the stunning desert landscapes.",
+        "destination": "morocco",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 10,
+        "name": "Galapagos Islands",
+        "description": "Discover the unique wildlife and breathtaking landscapes of this archipelago, made famous by Charles Darwin.",
+        "destination": "galapagos",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 11,
+        "name": "Great Barrier Reef",
+        "description": "Snorkel among the colorful coral and exotic fish of the world's largest coral reef system.",
+        "destination": "reef",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 12,
+        "name": "Cape Town",
+        "description": "Explore the stunning natural beauty of South Africa's Western Cape, from the iconic Table Mountain to the picturesque beaches.",
+        "destination": "cape",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 13,
+        "name": "Santorini",
+        "description": "Enjoy the stunning views and crystal-clear waters of this Greek island, famous for its whitewashed houses and blue-domed churches.",
+        "destination": "santorini",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 14,
+        "name": "Okavango Delta",
+        "description": "Experience the beauty of the African wilderness on a safari through the lush wetlands of the Okavango Delta.",
+        "destination": "delta",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 15,
+        "name": "Italy",
+        "description": "Sightsee beautiful ancient monuments and enjoy the delicious cuisine of beautiful Italy.",
+        "destination": "italy",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 16,
+        "name": "Bahamas",
+        "description": "Relax on the white-sand beaches and explore the crystal-clear waters of the Bahamas.",
+        "destination": "bahamas",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 17,
+        "name": "Pyramids of Giza",
+        "description": "Explore the ancient pyramids and other iconic landmarks of Egypt, from the Great Pyramid of Giza to the Valley of the Kings.",
+        "destination": "giza",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 18,
+        "name": "Taj Mahal",
+        "description": "Visit one of the world's most iconic landmarks and marvel at the stunning architecture and beautiful gardens of the Taj Mahal.",
+        "destination": "mahal",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 19,
+        "name": "Great Wall of China",
+        "description": "Walk along the ancient fortification and marvel at the stunning views of the Chinese countryside.",
+        "destination": "wall",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    },
+    {
+        "id": 20,
+        "name": "Greek Islands",
+        "description": "Explore the stunning beauty of the Aegean Sea, from the iconic ruins of ancient Greece to the crystal-clear waters and white-sand beaches.",
+        "destination": "greek",
+        "price": 35,
+        "places": 20,
+        "status": "AVAILABLE"
+    }
+]
