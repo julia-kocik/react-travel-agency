@@ -17,7 +17,7 @@ function App() {
           <Route path='' element={<Homepage/>}/>
           <Route path='cart' element={<Cart/>}/>
           <Route path='order' element={<Order/>}/>
-          <Route path='trips' element={<Gallery/>}/>
+          <Route path='trips' element={<Gallery searchTerm=""/>}/>
           <Route path='trips/:id' element={<Trip/>}/>
           <Route path='favourites' element={<Favourites/>}/>
           <Route path='contact' element={<Contact/>}/>

@@ -5,7 +5,6 @@ import './Gallery.scss'
 
 const GalleryItem = ({name, destination, id}) => {
     const url = `images/${destination}.jpg`;
-    console.log(url)
   return (
     <div className='gallery_item_container'>
         <img className='gallery_item_img' src={url} alt={name} />
