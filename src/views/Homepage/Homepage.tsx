@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Footer from '../../common/Footer/Footer';
 import Gallery from '../../features/Gallery/Gallery';
 import Header from '../../features/Header/Header';
 import SearchBar from '../../features/SearchBar/SearchBar';
@@ -14,6 +15,7 @@ const Homepage = () => {
       <Header/>
       <SearchBar onChangeTerm={onChangeTerm} searchTerm={searchTerm}/>
       <Gallery searchTerm={searchTerm}/>
+      <Footer/>
     </div>
   )
 }

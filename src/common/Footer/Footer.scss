@@ -1,0 +1,15 @@
+@import '../../settings.scss';
+
+.footer_container {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    background-color: $color-blue;
+    background: $color-gradient;
+    background: $linear-gradient;
+    span {
+        font-family: $font-main;
+    }
+}
