@@ -26,34 +26,28 @@ const Gallery = (props: GalleryPropsInterface) => {
     const [tripsPerPage] = useState(6)
 
     useEffect(() => {
-        const filtered = trips.filter((item) =>
+        const indexOfLastTrip = currentPage * tripsPerPage
+        const indexOfFirstTrip = indexOfLastTrip - tripsPerPage
+        const currentTrips = trips.slice(indexOfFirstTrip, indexOfLastTrip)
+        const filtered = currentTrips.filter((item) =>
             item.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
-        setFilteredTrips(filtered)
-    }, [searchTerm])
-
-    // get current trips
-    const indexOfLastTrip = currentPage * tripsPerPage
-    const indexOfFirstTrip = indexOfLastTrip - tripsPerPage
-    const currentTrips = filteredTrips.slice(indexOfFirstTrip, indexOfLastTrip)
-
-    // change page
-    const paginate = (pageNumber: number) => {
-        setCurrentPage(pageNumber)
-    }
+        setFilteredTrips(() => filtered)
+    }, [currentPage, searchTerm])
 
     return (
         <div>
             <div className="gallery_container">
-                {currentTrips.map((item) => (
+                {filteredTrips.map((item) => (
                     <GalleryItem key={item.id} {...item} />
                 ))}
             </div>
             <div>
                 <Pagination
                     postsPerPage={tripsPerPage}
-                    totalPosts={filteredTrips.length}
-                    paginate={paginate}
+                    totalPosts={trips.length}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
                 />
             </div>
         </div>

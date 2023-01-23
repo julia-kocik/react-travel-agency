@@ -1,6 +1,12 @@
+import { useEffect } from 'react'
 import './Pagination.scss'
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({
+    postsPerPage,
+    totalPosts,
+    setCurrentPage,
+    currentPage
+}) => {
     const pageNumbers = Array(Math.ceil(totalPosts / postsPerPage))
         .fill(1)
         .map((e, i) => i + 1)
@@ -8,14 +14,14 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         <nav>
             <ul className="pagination">
                 {pageNumbers.map((number) => (
-                    <li key={number} className="page-item">
-                        <a
-                            onClick={() => paginate(number)}
-                            href="#!"
-                            className="page-link"
-                        >
-                            {number}
-                        </a>
+                    <li
+                        key={number}
+                        className={`page_item ${currentPage===number && 'page_item_active'}`}
+                        onClick={() => {
+                            setCurrentPage(() => number)
+                        }}
+                    >
+                        {number}
                     </li>
                 ))}
             </ul>
