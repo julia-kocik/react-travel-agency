@@ -26,6 +26,21 @@
             flex-direction: column;
             align-items: center;
         }
+        .gallery_action_container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 0 28px;
+            cursor: pointer;
+            .gallery_action_icon {
+                font-size: 32px;
+                transition: all 2s;
+                &:hover {
+                    transform: scale(1.4);
+                }
+            }
+        }
     }
 }
 .gallery_wrapper {
