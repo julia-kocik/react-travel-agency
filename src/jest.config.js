@@ -12,4 +12,10 @@ module.exports = {
     stylePreprocessorOptions: {
         includePaths: ['src/sass'],
     },
+    moduleNameMapper: {},
+    transform: {
+        '^.+\\.js$': 'babel-jest',
+        '^.+\\.css$': 'jest-transform-scss',
+        '^.+\\.scss$': 'jest-transform-scss',
+    },
 }
