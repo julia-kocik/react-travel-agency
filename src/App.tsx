@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Gallery from './features/Gallery/Gallery';
+import GalleryWrapper from './features/Gallery/GalleryWrapper';
 import Cart from './views/Cart/Cart';
 import Contact from './views/Contact/Contact';
 import Favourites from './views/Favourites/Favourites';
@@ -17,7 +18,7 @@ function App() {
           <Route path='' element={<Homepage/>}/>
           <Route path='cart' element={<Cart/>}/>
           <Route path='order' element={<Order/>}/>
-          <Route path='trips' element={<Gallery searchTerm=""/>}/>
+          <Route path='trips' element={<GalleryWrapper/>}/>
           <Route path='trips/:id' element={<Trip/>}/>
           <Route path='favourites' element={<Favourites/>}/>
           <Route path='contact' element={<Contact/>}/>

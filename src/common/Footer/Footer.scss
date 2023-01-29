@@ -1,7 +1,7 @@
 @import '../../settings.scss';
 
 .footer_container {
-    height: 100px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +9,10 @@
     background-color: $color-blue;
     background: $color-gradient;
     background: $linear-gradient;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
     span {
         color: $color-white;
     }
