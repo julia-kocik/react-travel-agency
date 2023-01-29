@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './Trip.scss'
 import data from '../../data.json'
-
+import Navlinks from '../../common/Navlinks/Navlinks'
+import Navigation from '../../features/NavBar/NavItems/Navigation'
+import Footer from '../../common/Footer/Footer'
 
 interface TripInterface {
     id: number
@@ -21,18 +23,28 @@ const TripInitialObject: TripInterface = {
     destination: '',
     price: 0,
     places: 0,
-    status: ''
+    status: '',
 }
 
 const Trip = () => {
-    const {id} = useParams();
-    const trips = data;
-    const [trip, setTrip] = useState(TripInitialObject);
+    const { id } = useParams()
+    const trips = data
+    const [trip, setTrip] = useState(TripInitialObject)
     useEffect(() => {
-      const selected = trips.find(item => item.id === +id)
-      setTrip(selected)
+        const selected = trips.find((item) => item.id === +id)
+        setTrip(selected)
     }, [])
-    return <div>{trip?.id}{trip.name}{trip.description}</div>
+    return (
+        <div>
+            <Navlinks />
+            <div>
+                {trip?.id}
+                {trip.name}
+                {trip.description}
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
 export default Trip

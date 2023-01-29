@@ -3,6 +3,8 @@ import './Gallery.scss'
 import GalleryItem from './GalleryItem'
 import data from '../../data.json'
 import Pagination from '../Pagination/Pagination'
+import Navlinks from '../../common/Navlinks/Navlinks'
+import Footer from '../../common/Footer/Footer'
 
 interface TripInterface {
     id: number
@@ -37,6 +39,7 @@ const Gallery = (props: GalleryPropsInterface) => {
 
     return (
         <div>
+            <Navlinks/>
             <div className="gallery_container">
                 {filteredTrips.map((item) => (
                     <GalleryItem key={item.id} {...item} />
@@ -50,6 +53,7 @@ const Gallery = (props: GalleryPropsInterface) => {
                     currentPage={currentPage}
                 />
             </div>
+            <Footer/>
         </div>
     )
 }
