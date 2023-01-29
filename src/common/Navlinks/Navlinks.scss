@@ -1,0 +1,31 @@
+@import '../../settings.scss';
+
+.navlinks_container {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .nav_container {
+        height: 100%;
+        width: 100%;
+        color: $color-white;
+        background-color: $color-blue;
+        background: $color-gradient;
+        background: $linear-gradient;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-size: 24px;
+        .nav_items {
+            margin: 0 30px;
+            font-family: $font-main;
+        }
+    }
+    .nav_links {
+        text-decoration: none;
+        color: $color-white;
+    }
+}

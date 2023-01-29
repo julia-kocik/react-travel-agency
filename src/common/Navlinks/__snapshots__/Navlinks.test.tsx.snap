@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navlinks component should render correctly 1`] = `
+<div
+  class="navlinks_container"
+  data-testid="navlinks-container"
+>
+  <span>
+    Julia Kocik 2023
+  </span>
+</div>
+`;
