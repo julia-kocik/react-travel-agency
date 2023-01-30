@@ -12,6 +12,7 @@ interface TripInterface {
     price: number
     places: number
     status: string
+    favourite: boolean
 }
 
 interface GalleryPropsInterface {
@@ -24,7 +25,26 @@ const Gallery = (props: GalleryPropsInterface) => {
     const [filteredTrips, setFilteredTrips] = useState(trips)
     const [currentPage, setCurrentPage] = useState(1)
     const [tripsPerPage] = useState(6)
+    const [favourites, setFavourites] = useState(
+        JSON.parse(localStorage.getItem('favourites')) ?? []
+    )
 
+    const addToFavourites = (id: number) => {
+        const found = trips.find((item) => item.id === id)
+        const newFav = [...favourites, { ...found, favourite: true }]
+        setFavourites(newFav)
+    }
+
+    const removeFromFavourites = (id: number) => {
+        const filtered = favourites.filter((item) => item.id !== id)
+        setFavourites(filtered)
+    }
+
+    //add to localstorage
+    useEffect(() => {
+        localStorage.setItem('favourites', JSON.stringify(favourites))
+    }, [favourites])
+    // pagination
     useEffect(() => {
         const indexOfLastTrip = currentPage * tripsPerPage
         const indexOfFirstTrip = indexOfLastTrip - tripsPerPage
@@ -39,7 +59,13 @@ const Gallery = (props: GalleryPropsInterface) => {
         <div>
             <div className="gallery_container">
                 {filteredTrips.map((item) => (
-                    <GalleryItem key={item.id} {...item} />
+                    <GalleryItem
+                        key={item.id}
+                        {...item}
+                        favourites={favourites}
+                        addToFavourites={addToFavourites}
+                        removeFromFavourites={removeFromFavourites}
+                    />
                 ))}
             </div>
             <div>

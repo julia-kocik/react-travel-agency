@@ -6,34 +6,37 @@ import Button from '../../common/Button/Button'
 import './Gallery.scss'
 import data from '../../data.json'
 
-const GalleryItem = ({ name, destination, id }) => {
+const GalleryItem = ({
+    name,
+    destination,
+    id,
+    addToFavourites,
+    removeFromFavourites,
+    favourites,
+}) => {
     const [favourite, setFavourite] = useState(false);
-    const [favourites, setFavourites] = useState([]);
-
     const url = `images/${destination}.jpg`;
-    const trips = data;
-
     useEffect(() => {
-        const found = trips.find(item => item.id=== id);
-        setFavourites([...favourites, found]);
-        const current = JSON.parse(localStorage.getItem('favourites'));
-        const toAdd = current ? JSON.stringify([...current, found]) : JSON.stringify([found]);
-        if(favourite) {
-          if(current?.find(item => item.id===id)===undefined) {
-          localStorage.setItem('favourites', toAdd);
-          }
-        } 
-        if(!favourite) {
-          const getFav = JSON.parse(localStorage.getItem('favourites'));
-          const filtered = getFav.filter(item => item.id !== id);
-          const toAdd = JSON.stringify(filtered);
-          localStorage.setItem('favourites', toAdd);
+        const checkIfFav = () => {
+            const found = favourites.find((item) => item.id === id)
+            if (found) {
+                setFavourite(true)
+            } else {
+                setFavourite(false)
+            }
         }
-    }, [favourite])
+        checkIfFav()
+    }, [favourites])
 
     const toggleFavourite = () => {
-        setFavourite(() => !favourite)
+        if(!favourite) {
+            addToFavourites(id)
+        }
+        if(favourite) {
+            removeFromFavourites(id)
+        }
     }
+
     return (
         <div className="gallery_item_container">
             <img className="gallery_item_img" src={url} alt={name} />
