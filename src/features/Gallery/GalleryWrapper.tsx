@@ -7,7 +7,7 @@ const GalleryWrapper = () => {
   return (
     <div className='gallery_wrapper'>
         <Navlinks/>
-        <Gallery searchTerm=''/>
+        <Gallery all={true} searchTerm=''/>
         <Footer/>
     </div>
   )

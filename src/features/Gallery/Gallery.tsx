@@ -17,11 +17,13 @@ interface TripInterface {
 
 interface GalleryPropsInterface {
     searchTerm: string
+    fav?: boolean
+    all?: boolean
 }
 
 const Gallery = (props: GalleryPropsInterface) => {
     const trips: TripInterface[] = data
-    const searchTerm = props.searchTerm
+    const { searchTerm, fav, all } = props
     const [filteredTrips, setFilteredTrips] = useState(trips)
     const [currentPage, setCurrentPage] = useState(1)
     const [tripsPerPage] = useState(6)
@@ -58,23 +60,36 @@ const Gallery = (props: GalleryPropsInterface) => {
     return (
         <div>
             <div className="gallery_container">
-                {filteredTrips.map((item) => (
-                    <GalleryItem
-                        key={item.id}
-                        {...item}
-                        favourites={favourites}
-                        addToFavourites={addToFavourites}
-                        removeFromFavourites={removeFromFavourites}
-                    />
-                ))}
+                {all &&
+                    filteredTrips.map((item) => (
+                        <GalleryItem
+                            key={item.id}
+                            {...item}
+                            favourites={favourites}
+                            addToFavourites={addToFavourites}
+                            removeFromFavourites={removeFromFavourites}
+                        />
+                    ))}
+                {fav &&
+                    favourites.map((item) => (
+                        <GalleryItem
+                            key={item.id}
+                            {...item}
+                            favourites={favourites}
+                            addToFavourites={addToFavourites}
+                            removeFromFavourites={removeFromFavourites}
+                        />
+                    ))}
             </div>
             <div>
-                <Pagination
-                    postsPerPage={tripsPerPage}
-                    totalPosts={trips.length}
-                    setCurrentPage={setCurrentPage}
-                    currentPage={currentPage}
-                />
+                {all && (
+                    <Pagination
+                        postsPerPage={tripsPerPage}
+                        totalPosts={trips.length}
+                        setCurrentPage={setCurrentPage}
+                        currentPage={currentPage}
+                    />
+                )}
             </div>
         </div>
     )

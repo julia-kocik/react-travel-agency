@@ -14,7 +14,7 @@ const Homepage = () => {
     <div>
       <Header/>
       <SearchBar onChangeTerm={onChangeTerm} searchTerm={searchTerm}/>
-      <Gallery searchTerm={searchTerm}/>
+      <Gallery all={true} searchTerm={searchTerm}/>
       <Navlinks/>
     </div>
   )
