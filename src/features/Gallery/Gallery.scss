@@ -45,4 +45,10 @@
 }
 .gallery_wrapper {
     margin-bottom: 60px;
+    .gallery_nav_container {
+        background-color: $color-blue;
+        background: $color-gradient;
+        background: $linear-gradient;
+        height: 100px;
+    }
 }

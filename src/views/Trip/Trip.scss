@@ -1,1 +1,8 @@
 @import '../../settings.scss';
+
+.trip_nav_container {
+    background-color: $color-blue;
+    background: $color-gradient;
+    background: $linear-gradient;
+    height: 100px;
+}

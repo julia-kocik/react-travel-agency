@@ -5,6 +5,7 @@ import data from '../../data.json'
 import Navlinks from '../../common/Navlinks/Navlinks'
 import Navigation from '../../features/NavBar/NavItems/Navigation'
 import Footer from '../../common/Footer/Footer'
+import NavBar from '../../features/NavBar/NavBar'
 
 interface TripInterface {
     id: number
@@ -36,7 +37,9 @@ const Trip = () => {
     }, [])
     return (
         <div>
-            <Navlinks />
+             <div className="trip_nav_container">
+                <NavBar />
+            </div>
             <div>
                 {trip?.id}
                 {trip.name}
