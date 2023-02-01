@@ -6,3 +6,24 @@
     background: $linear-gradient;
     height: 100px;
 }
+.contact_content_container {
+    min-height: 572px;
+    width: 100%;
+    display: flex;
+    padding: 60px 120px;
+    .contact_photo {
+        flex: 0 0 50%;
+        background-image: url('../../../public/images/window.jpg');
+        background-size: 100% 100%;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .contact_form {
+        border: 3px solid $color-blue;
+        flex: 0 0 50%;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

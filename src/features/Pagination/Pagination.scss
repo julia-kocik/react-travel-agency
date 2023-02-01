@@ -7,11 +7,12 @@
     .page_item {
         text-decoration: none;
         color: $color-blue;
-        padding: 0 10px;
-        border: 1px solid $color-blue;
+        padding: 6px 14px;
+        border: 2px solid $color-blue;
         border-radius: 10px;
         margin: 0 10px;
         cursor: pointer;
+        font-size: 18px;
     }
     .page_item_active {
         background-color: $color-blue;
