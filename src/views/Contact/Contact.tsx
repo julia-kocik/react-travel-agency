@@ -7,10 +7,13 @@ import './Contact.scss'
 const Contact = () => {
     return (
         <div>
-             <div className="contact_nav_container">
+            <div className="contact_nav_container">
                 <NavBar />
             </div>
-            <div></div>
+            <div className="contact_content_container">
+                <div className="contact_photo"></div>
+                <div className="contact_form"></div>
+            </div>
             <Footer />
         </div>
     )
