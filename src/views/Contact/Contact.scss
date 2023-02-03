@@ -29,9 +29,13 @@
         justify-content: center;
         align-items: center;
         .contact_form {
-            border: 1px solid red;
             height: 300px;
             width: 350px;
+            .form_message {
+                font-family: $font-main;
+                font-size: 16px;
+                color: $color-blue;
+            }
             input {
                 width: 100%;
                 background-color: transparent;
@@ -50,6 +54,11 @@
                 color: $color-white;
                 margin-top: 30px;
                 cursor: pointer;
+                &:disabled {
+                    background-color: $color-grey;
+                    border-color: $color-grey;
+                    cursor: auto;
+                }
             }
         }
     }
