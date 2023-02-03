@@ -19,11 +19,38 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
-    .contact_form {
+    .contact_form_container {
         border: 3px solid $color-blue;
         flex: 0 0 50%;
         border-radius: 10px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .contact_form {
+            border: 1px solid red;
+            height: 300px;
+            width: 350px;
+            input {
+                width: 100%;
+                background-color: transparent;
+                color: $color-blue;
+                border: 2px solid $color-blue;
+                border-radius: 10px;
+                font-family: $font-main;
+                padding: 10px;
+                font-size: 16px;
+                box-shadow: $box-shadow;
+                outline: none;
+                margin-top: 10px;
+            }
+            input[type='submit'] {
+                background-color: $color-blue;
+                color: $color-white;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+        }
     }
 }
