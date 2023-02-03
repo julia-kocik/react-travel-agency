@@ -9,17 +9,43 @@ const Contact = () => {
         surname: '',
         email: '',
     })
+    const [success, setSuccess] = useState(false);
+    const [disabled, setDisabled] = useState(true);
+    const [hint,setHint] = useState('')
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    const handleHint = (targetInput) => {
+        if(!targetInput.value) {
+            setHint(`You ${targetInput.name} field must not be empty`)
+        }
+        if(targetInput.name==="email" && !regex.test(targetInput.value)) {
+            setHint(`Your email is not valid`)
+        }
+        if(regex.test(targetInput.value)) {
+            setHint('')
+        }
+    }
+
     const onChangeHandler = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
+        handleHint(e.target)
+        if(name && surname && email && regex.test(email)) {
+            setDisabled(false)
+        }
     }
     const onSubmitHandler = (e) => {
         e.preventDefault()
         console.log(formData)
+        setSuccess(true);
         setFormData({
             name: '',
             surname: '',
             email: '',
         })
+        setTimeout(() => {
+            setSuccess(false)
+            setDisabled(true)
+        }, 3000);
     }
     const { name, surname, email } = formData
     return (
@@ -61,7 +87,9 @@ const Contact = () => {
                                 placeholder="Email"
                             />
                         </div>
-                        <input type="submit" value="Submit" />
+                        <input className={disabled && "disabled"} type="submit" value="Submit" disabled={disabled} />
+                        {success && <h5 className='form_message'>Your message has been successfully sent!</h5>}
+                        <h5 className='form_message'>{hint}</h5>
                     </form>
                 </div>
             </div>
