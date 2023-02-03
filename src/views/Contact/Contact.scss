@@ -27,7 +27,8 @@
         border-bottom-left-radius: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        padding-top: 30px;
         .contact_form {
             height: 300px;
             width: 350px;
@@ -36,7 +37,8 @@
                 font-size: 16px;
                 color: $color-blue;
             }
-            input {
+            input,
+            textarea {
                 width: 100%;
                 background-color: transparent;
                 color: $color-blue;
@@ -48,6 +50,7 @@
                 box-shadow: $box-shadow;
                 outline: none;
                 margin-top: 10px;
+                resize: none;
             }
             input[type='submit'] {
                 background-color: $color-blue;
