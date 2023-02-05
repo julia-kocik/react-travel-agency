@@ -4,15 +4,15 @@
     background-color: $color-blue;
     background: $color-gradient;
     background: $linear-gradient;
-    height: 120px;
+    height: 80px;
 }
 .contact_content_container {
     min-height: 572px;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 60px 120px;
-    margin: 40px 0;
+    padding: 60px 80px;
+    margin: 20px 0;
     .contact_photo {
         flex: 0 0 40%;
         background-image: url('../../../public/images/window.jpg');
@@ -22,7 +22,7 @@
         border-bottom-right-radius: 0;
     }
     .contact_form_container {
-        border: 3px solid $color-blue;
+        border: 2px solid $color-blue;
         flex: 0 0 40%;
         border-radius: 10px;
         border-top-left-radius: 0;
@@ -33,7 +33,7 @@
         padding-top: 30px;
         .contact_form {
             height: 300px;
-            width: 350px;
+            width: 330px;
             .form_message {
                 font-family: $font-main;
                 font-size: 16px;
@@ -48,7 +48,7 @@
                 border-radius: 10px;
                 font-family: $font-main;
                 padding: 10px;
-                font-size: 16px;
+                font-size: 14px;
                 box-shadow: $box-shadow;
                 outline: none;
                 margin-top: 10px;
@@ -65,6 +65,46 @@
                     cursor: auto;
                 }
             }
+        }
+    }
+}
+
+@include tablet {
+    .contact_content_container {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        min-height: 572px;
+        display: block;
+        .contact_photo {
+            display: none;
+        }
+        .contact_form_container {
+            padding: 60px 30px;
+            height: 450px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 0px solid $color-blue;
+        }
+    }
+}
+
+@include mobile {
+    .contact_content_container {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        min-height: 572px;
+        display: block;
+        .contact_photo {
+            display: none;
+        }
+        .contact_form_container {
+            padding: 60px 30px;
+            height: 450px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 0px solid $color-blue;
         }
     }
 }

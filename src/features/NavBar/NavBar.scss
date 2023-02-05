@@ -12,7 +12,7 @@
         .logo {
             display: inline-block;
             color: $color-white;
-            font-size: 36px;
+            font-size: 28px;
             text-align: center;
             font-family: $font-logo;
         }
@@ -26,7 +26,7 @@
         justify-content: center;
         align-items: center;
         margin: 0;
-        font-size: 24px;
+        font-size: 16px;
         .nav_items {
             margin: 0 30px;
             font-family: $font-main;
@@ -45,9 +45,39 @@
         align-items: center;
         .cart_icon {
             cursor: pointer;
-            font-size: 36px;
+            font-size: 20px;
             padding-left: 20px;
             visibility: hidden;
+        }
+    }
+}
+
+@include tablet {
+    .navigation {
+        max-width: $max-tablet-width;
+        .login_container {
+            display: none;
+        }
+        .logo_container {
+            .logo {
+                font-size: 36px;
+            }
+        }
+        .nav_container {
+            flex: 0 0 40%;
+            font-size: 18px;
+            .nav_items {
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .navigation {
+        max-width: $max-mobile-width;
+        .login_container {
+            display: none;
         }
     }
 }

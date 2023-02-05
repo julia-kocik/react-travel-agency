@@ -1,7 +1,7 @@
 @import '../../settings.scss';
 
 .navlinks_container {
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
         justify-content: center;
         align-items: center;
         margin: 0;
-        font-size: 24px;
+        font-size: 16px;
         .nav_items {
             margin: 0 30px;
             font-family: $font-main;

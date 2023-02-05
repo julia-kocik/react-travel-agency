@@ -42,7 +42,7 @@ const GalleryItem = ({
             <img className="gallery_item_img" src={url} alt={name} />
             <div className="gallery_item_title_container">
                 <div className="gallery_item_title">
-                    <h3>{name}</h3>
+                    <h4>{name}</h4>
                 </div>
                 <div className="gallery_action_container">
                     <Link to={`/trips/${id}`}>

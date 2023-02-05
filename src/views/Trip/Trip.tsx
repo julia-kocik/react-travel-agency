@@ -52,7 +52,7 @@ const Trip = () => {
                     }}
                 ></div>
                 <div className="trip_content">
-                    <h1>{name}</h1>
+                    <h2>{name}</h2>
                     <p>{description}</p>
                     <div className="trip_details">
                         <span>

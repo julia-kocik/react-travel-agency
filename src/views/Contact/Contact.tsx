@@ -80,7 +80,7 @@ const Contact = () => {
                                 name="name"
                                 value={name}
                                 onChange={onChangeHandler}
-                                placeholder="Name"
+                                placeholder="Name*"
                             />
                         </div>
                         <div className="form_group">
@@ -90,7 +90,7 @@ const Contact = () => {
                                 name="surname"
                                 value={surname}
                                 onChange={onChangeHandler}
-                                placeholder="Surname"
+                                placeholder="Surname*"
                             />
                         </div>
                         <div className="form_group">
@@ -100,14 +100,14 @@ const Contact = () => {
                                 name="email"
                                 value={email}
                                 onChange={onChangeHandler}
-                                placeholder="Email"
+                                placeholder="Email*"
                             />
                         </div>
                         <div className="form_group">
                             <label htmlFor="message"></label>
                             <textarea
                                 name="message"
-                                placeholder="Please type your message"
+                                placeholder="Please type your message*"
                                 value={message}
                                 onChange={onChangeHandler}
                                 rows={4}

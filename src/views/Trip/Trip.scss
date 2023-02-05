@@ -4,15 +4,15 @@
     background-color: $color-blue;
     background: $color-gradient;
     background: $linear-gradient;
-    height: 120px;
+    height: 80px;
 }
 .trip_content_container {
     min-height: 572px;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 60px 120px;
-    margin: 40px 0;
+    padding: 60px 80px;
+    margin: 20px 0;
     .trip_photo {
         border: 3px solid transparent;
         flex: 0 0 40%;
@@ -31,15 +31,15 @@
         border-bottom-left-radius: 0;
         font-family: $font-main;
         color: $color-blue;
-        h1 {
+        h2 {
             text-align: center;
         }
         p {
-            font-size: 22px;
+            font-size: 16px;
             padding: 20px 40px;
         }
         .trip_details {
-            font-size: 22px;
+            font-size: 14px;
             padding: 20px 40px;
             display: flex;
             flex-direction: column;
