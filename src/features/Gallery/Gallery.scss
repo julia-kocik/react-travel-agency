@@ -58,3 +58,16 @@
         height: 80px;
     }
 }
+
+@include tablet {
+    .gallery_box {
+        .gallery_container {
+            .gallery_item_container {
+                flex: 0 0 40%;
+            }
+        }
+    }
+}
+
+@include mobile {
+}

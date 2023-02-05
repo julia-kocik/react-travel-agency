@@ -7,9 +7,10 @@
     height: 80px;
 }
 .trip_content_container {
-    min-height: 572px;
+    height: 1072px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 60px 80px;
     margin: 20px 0;
@@ -52,4 +53,22 @@
             height: 40px;
         }
     }
+}
+
+@include tablet {
+    .trip_content_container {
+        min-height: 1072px;
+        justify-content: flex-start;
+        .trip_content {
+            border-top: 0px;
+            border-left: 3px solid $color-blue;
+            border-radius: 10px;
+        }
+        .trip_photo {
+            border-radius: 10px;
+        }
+    }
+}
+
+@include mobile {
 }

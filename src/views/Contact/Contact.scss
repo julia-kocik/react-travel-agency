@@ -74,37 +74,19 @@
         padding: 0;
         margin: 0;
         flex-direction: column;
-        min-height: 572px;
-        display: block;
-        .contact_photo {
-            display: none;
-        }
+        height: 1072px;
+        justify-content: flex-start;
         .contact_form_container {
             padding: 60px 30px;
-            height: 450px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             border: 0px solid $color-blue;
+            .contact_form {
+                width: 420px;
+            }
         }
     }
 }
 
 @include mobile {
-    .contact_content_container {
-        padding: 0;
-        margin: 0;
-        flex-direction: column;
-        min-height: 572px;
-        display: block;
-        .contact_photo {
-            display: none;
-        }
-        .contact_form_container {
-            padding: 60px 30px;
-            height: 450px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border: 0px solid $color-blue;
-        }
-    }
 }
