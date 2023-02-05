@@ -46,6 +46,7 @@ const Gallery = (props: GalleryPropsInterface) => {
     useEffect(() => {
         localStorage.setItem('favourites', JSON.stringify(favourites))
     }, [favourites])
+    
     // pagination
     useEffect(() => {
         const indexOfLastTrip = currentPage * tripsPerPage
@@ -58,7 +59,7 @@ const Gallery = (props: GalleryPropsInterface) => {
     }, [currentPage, searchTerm])
 
     return (
-        <div>
+        <div className='gallery_box'>
             <div className="gallery_container">
                 {all &&
                     filteredTrips.map((item) => (
