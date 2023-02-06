@@ -29,3 +29,12 @@
         color: $color-white;
     }
 }
+
+@include tablet {
+}
+
+@include mobile {
+    .nav_container {
+        padding-left: 0;
+    }
+}

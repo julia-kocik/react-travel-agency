@@ -19,3 +19,15 @@
         outline: none;
     }
 }
+
+@include tablet {
+    .searchbar_container {
+        margin-top: 60px;
+    }
+}
+
+@include mobile {
+    .searchbar_container {
+        margin: 60px 40px 0 40px;
+    }
+}

@@ -5,7 +5,7 @@ import './Navlinks.scss'
 const Navlinks = () => {
   return (
     <div data-testid="navlinks-container" className='navlinks_container'>
-      <Navigation/>
+      <Navigation showMobileMenu={false}/>
     </div>
   )
 }

@@ -70,4 +70,12 @@
 }
 
 @include mobile {
+    .gallery_box {
+        .gallery_container {
+            .gallery_item_container {
+                flex: 0 0 100%;
+                margin: 20px 2px;
+            }
+        }
+    }
 }

@@ -1,12 +1,11 @@
 import React from 'react'
 import '../NavBar.scss'
-import { Link } from 'react-router-dom'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { AiOutlineMenu } from 'react-icons/ai'
 
-const Login = () => {
+const Login = ({toggleMobile}) => {
     return (
-        <div className="login_container">
-            <span className='cart_icon'><AiOutlineShoppingCart/></span>
+        <div className="login_container" onClick={toggleMobile}>
+            <span className='cart_icon'><AiOutlineMenu/></span>
         </div>
     )
 }

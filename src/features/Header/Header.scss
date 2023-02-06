@@ -32,3 +32,31 @@
         }
     }
 }
+.tablet_navbar {
+    display: none;
+}
+@include tablet {
+    .header_container {
+        display: none;
+    }
+    .tablet_navbar {
+        display: flex;
+        background-color: $color-blue;
+        background: $color-gradient;
+        background: $linear-gradient;
+        height: 80px;
+    }
+}
+
+@include mobile {
+    .header_container {
+        display: none;
+    }
+    .tablet_navbar {
+        display: flex;
+        background-color: $color-blue;
+        background: $color-gradient;
+        background: $linear-gradient;
+        height: 80px;
+    }
+}

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../NavBar.scss'
 import { Link } from "react-router-dom";
 
-const Navigation = () => {
+const Navigation = ({showMobileMenu}) => {
   return (
-    <ul className='nav_container'>
+    <ul className={`nav_container ${showMobileMenu && 'nav_container_show'}`}>
             <li className='nav_items'>
               <Link className='nav_links' to="/trips">Trips</Link>
             </li>

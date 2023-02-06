@@ -76,6 +76,10 @@
         flex-direction: column;
         height: 1072px;
         justify-content: flex-start;
+        .contact_photo {
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 10px;
+        }
         .contact_form_container {
             padding: 60px 30px;
             border-top-left-radius: 10px;
@@ -89,4 +93,24 @@
 }
 
 @include mobile {
+    .contact_content_container {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        height: 1072px;
+        justify-content: flex-start;
+        .contact_photo {
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 10px;
+        }
+        .contact_form_container {
+            padding: 60px 30px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 0px solid $color-blue;
+            .contact_form {
+                width: 420px;
+            }
+        }
+    }
 }
