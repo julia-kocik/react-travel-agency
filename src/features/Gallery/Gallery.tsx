@@ -49,13 +49,14 @@ const Gallery = (props: GalleryPropsInterface) => {
     
     // pagination
     useEffect(() => {
-        const indexOfLastTrip = currentPage * tripsPerPage
-        const indexOfFirstTrip = indexOfLastTrip - tripsPerPage
-        const currentTrips = trips.slice(indexOfFirstTrip, indexOfLastTrip)
-        const filtered = currentTrips.filter((item) =>
+        const filtered = trips.filter((item) =>
             item.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
-        setFilteredTrips(() => filtered)
+        const indexOfLastTrip = currentPage * tripsPerPage
+        const indexOfFirstTrip = indexOfLastTrip - tripsPerPage
+        const currentTrips = filtered.slice(indexOfFirstTrip, indexOfLastTrip)
+        
+        setFilteredTrips(() => currentTrips)
     }, [currentPage, searchTerm])
 
     return (
