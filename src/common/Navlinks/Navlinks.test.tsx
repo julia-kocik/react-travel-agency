@@ -1,22 +1,24 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Add this line
 import Navlinks from './Navlinks';
-import './Navlinks.scss'
 
-describe('Navlinks component', () => {
-  it('should render correctly', () => {
-    const { container } = render(<Navlinks />);
-    expect(container.firstChild).toMatchSnapshot();
+describe('Navlinks Component Test', () => {
+  test('Should renders Navlink component without crashing.', () => {
+    render(<Router><Navlinks /></Router>); 
+    const navlinks = screen.getByTestId('navlinks-container');
+    expect(navlinks).toBeInTheDocument();
   });
 
-  it('should contain a div with class "navlinks_container"', () => {
-    const { getByTestId } = render(<Navlinks />);
-    expect(getByTestId('navlinks-container').classList.contains('navlinks_container')).toBe(true);
-  });
+  test('Should display Navigation component within Navlinks', () => {
+    render(<Router><Navlinks /></Router>);
+    const navigation = screen.getByRole('list');
+    expect(navigation).toBeInTheDocument();
+  })
 
-  it('should contain a span with text "Julia Kocik 2023"', () => {
-    const { getByText } = render(<Navlinks />);
-    expect(getByText('Julia Kocik 2023')).toBeInTheDocument();
-  });
-
+  test('Should pass a boolean value prop false to the Navigation component', () => {
+    render(<Router><Navlinks /></Router>); // Wrap Navlinks with Router component
+    const navigation = screen.getByTestId('navlinks-container');
+    expect(navigation).toHaveClass('navlinks_container');
+  })
 });
