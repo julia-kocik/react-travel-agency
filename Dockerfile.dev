@@ -1,9 +1,12 @@
 FROM node:16-alpine
-
-WORKDIR '/app'
-
-COPY package.json .
-RUN yarn install
-
-COPY . .
-CMD ["yarn", "start"]
+ 
+USER node
+ 
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
+ 
+COPY --chown=node:node ./package.json ./
+RUN npm install
+COPY --chown=node:node ./ ./
+ 
+CMD ["npm", "start"]
